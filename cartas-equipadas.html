@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EQUIPADAS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="init.css">
+    <link rel="icon" href="SITE ELEMENTS/icon.png">
+    <script>
+        function carregar_cartas() {
+            for (i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i)
+                if (!document.querySelector(`img[alt="${key}"]`)) {
+                    let imag = document.createElement("img")
+                    imag.src = localStorage.getItem(localStorage.key(i));
+                    imag.alt = localStorage.key(i)
+                    console.log(imag)
+                    document.getElementById("stor").appendChild(imag)
+                    console.log(key)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <span id="toFix">A</span>
+    <div class="cardani">
+    <div id="stor" class="image-container"></div>
+    </div>
+    <button onclick="carregar_cartas()">AAAAAAAA</button>
+    <!-- Mudar isso ^ -->
+    <footer>
+        <a class="card-distribuition" href="index.html">CARTAS</a>
+    </footer>
+</body>
+
+</html>
