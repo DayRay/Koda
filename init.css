@@ -13,6 +13,7 @@
   height: auto; 
   transition: transform 0.3s ease-in-out;
   margin-bottom: 10px; 
+  border-radius: 10px;
 }
 body {
   margin: 0;
@@ -39,7 +40,11 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 .image-container .com:hover {
+  opacity: 1;
   transform: scale(1.2); /* Scalar menos ou mais */
+}
+.image-container .com{
+  opacity: 0.4; /* Optionally dim the image itself */ 
 }
 .cardani div img {
   transition: transform 0.5s ease-in-out;
